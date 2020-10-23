@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+
+ {% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+    
+
+</head>
+
+<body>
+
+  <html lang="en-US">
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ <![endif]-->
+
+  </head>
+
+  <body>
+  <!--=================================
+	Header
+	=================================-->
+    <header>
+        <div class="social-links">
+            <div class="container">
+                <ul class="social">
+                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fa fa-pinterest"></span></a></li>
+                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                    <li><a href="#"><span class="fa fa-flickr"></span></a></li>
+                    <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                    <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="navbar yamm navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle fa fa-navicon"></button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="/img/basic/logo.png" alt="logo" />
+                    </a>
+                </div>
+                <div class="nav_wrapper">
+                    <div class="nav_scroll">
+                        <div class="nav-search">
+                            <form>
+                                <input type="text" placeholder="Search" />
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+
+                        <ul class="nav navbar-nav">
+                            <li class="desactive dropdown"><a href="{{path('homepage')}}">Accueil<i class="fa fa-caret-right"></i></a>
+                              
+                            </li>
+                           
+                           
+                            <li class="yamm-fw dropdown"><a href="#">Organisateurs<i class="fa fa-caret-right"></i></a>
+                            </li>
+                           
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="{{path('security_login')}}">Login</a></li>
+                            <li class="active dropdown"><a href="{{path('security_registration')}}">Inscription</a></li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+
+                </div>
+            </div>
+        </nav>
+    </header>
+  
+    <div class="container" style="width:400px">
+     <h1> Inscription </h1>
+      <div id="login">
+
+
+        {{form_start(form)}}
+     
+
+        {{form_widget(form)}}
+       <p><input type="submit" value="inscrire"></p>
+       
+       
+       {{form_end(form)}}
+
+
+        <p>Pas encors inscrit? <a href="#">Sign up maintenant</a><span class="fontawesome-arrow-right"></span></p>
+
+      </div> <!-- end login -->
+
+    </div>
+
+  </body>
+</html>
+
+</body>
+
+</html>
+
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+<h1>Activation de compte</h1>
+
+<p>Vous avez crée un compte sur votre site,veuiller cliquer sur le lien ci-dessous pour l'activé</p>
+<button class="btn btn-success"><a href="{{absolute_url(path('activation',{'token':token}))}}">Activé mon compte</a>
+
+{% endblock %}

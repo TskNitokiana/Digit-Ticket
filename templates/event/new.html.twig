@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Event{% endblock %}
+
+{% block body %}
+        <!--=================================
+	Header
+	=================================-->
+    <header>
+        <div class="social-links">
+            <div class="container" width="80%">
+                <ul class="social">
+                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fa fa-pinterest"></span></a></li>
+                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                    <li><a href="#"><span class="fa fa-flickr"></span></a></li>
+                    <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                    <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="navbar yamm navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle fa fa-navicon"></button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="/img/basic/logo.png" alt="logo" />
+                    </a>
+                </div>
+                <div class="nav_wrapper">
+                    <div class="nav_scroll">
+                        <div class="nav-search">
+                            <form>
+                                <input type="text" placeholder="Search" />
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+
+                        <ul class="nav navbar-nav">
+                            <li class="active dropdown"><a href="#">Accueil<i class="fa fa-caret-right"></i></a>
+                              
+                            </li>
+                           
+                           
+                            <li class="yamm-fw dropdown"><a href="#">Organisateurs<i class="fa fa-caret-right"></i></a>
+                            </li>
+                           
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="{{path('security_login')}}">Login</a></li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <h1 style="text-align:center">Creation evenement</h1>
+
+    {{ include('event/_form.html.twig') }}
+    <a href="{{ path('homepage') }}">back to list</a>
+{% endblock %}
